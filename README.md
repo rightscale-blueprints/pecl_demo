@@ -1,6 +1,3 @@
-pecl_demo
-=========
-
 #Description
 
 A basic RightScale Blueprint to demo install and removal of PECL packages.
@@ -18,16 +15,14 @@ See the Quick Start below to get started.
 
 The following core cookbooks are included:
 
-* system
+* pecl
+* php
 * resolver
 * rightscale
 * collectd
 * sudo
 * ntp
-* postfix
-* python
-* ruby
-* rubygems
+* system
 
 Additional/depends cookbooks:
 
@@ -35,7 +30,9 @@ Additional/depends cookbooks:
 * build-essential
 * collectd_plugins
 * cron
+* postfix
 * yum
+* xml
 
 See the `Cheffile.lock` for details on their upstream sources.
 
@@ -58,8 +55,6 @@ Here is a summary of the main Chef node attributes (analog to RightScale Inputs)
 * postfix/mail_relay_networks (plus all postfix cookbook attributes)
 * resolver/nameservers
 * resolver/search
-* ruby/install_source
-* rubygems/gems_install
 * system/domain_name
 * system/short_hostname
 * system/timezone
@@ -86,8 +81,8 @@ Follow the VirtualBox documentation to install VirtualBox if not already install
 
 	mkdir -p ~/src/github/rightscale-blueprints
 	cd ~/src/github/rightscale-blueprints
-	git clone git://github.com/rightscale-blueprints/linux_server.git
-	cd linux_server/vagrant
+	git clone git://github.com/rightscale-blueprints/pecl_demo.git
+	cd pecl_demo/vagrant
 
 ###Run with Vagrant
 
@@ -102,8 +97,8 @@ Already up'd a linux_server box?
 
 Add a new box from local or remote (Ubuntu 12.04)
 
-	vagrant box add linux_server http://files.vagrantup.com/precise64.box
-	#vagrant box add linux_server ~/Binaries/vagrant/boxes/precise64.box
+	vagrant box add pecl_demo http://files.vagrantup.com/precise64.box
+	#vagrant box add pecl_demo ~/Binaries/vagrant/boxes/precise64.box
 
 Need debug?
 
@@ -129,11 +124,11 @@ By default this uses the `examples/chef-solo/node.json`. You can easily switch t
 	
 Its also possible to run with the cookbooks source as remote. This is handy because no Git checkout is needed:
 
-	sudo chef-solo -r https://github.com/rightscale-blueprints/linux_server/tarball/master
+	sudo chef-solo -r https://github.com/rightscale-blueprints/pecl_demo/tarball/master
 	
 And with a specific tag such as `Rev1`:
 
-	sudo chef-solo -r https://github.com/rightscale-blueprints/linux_server/tarball/rev1
+	sudo chef-solo -r https://github.com/rightscale-blueprints/pecl_demo/tarball/rev1
 
 For more information on using Chef Solo, see http://wiki.opscode.com/display/chef/Chef+Solo
 
@@ -151,7 +146,7 @@ Set this environment variable to strip .git from each cookbook checkout:
 
 To update a cookbook (example, postgresql):
 	
-	librarian-chef update rightscale
+	librarian-chef update pecl
 
 To refresh all the cookbooks in `cookbooks/` per the `Cheffile`, run the following:
 
