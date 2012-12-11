@@ -1,26 +1,17 @@
 {
-  "suggestions": {
+  "platforms": {
   },
-  "recommendations": {
+  "description": "Installs/Configures pecl",
+  "dependencies": {
+    "php": ">= 0.0.0"
   },
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
+  "version": "0.0.1",
   "attributes": {
     "pecl/packages_remove": {
-      "required": "optional",
+      "type": "array",
       "description": "The PECL packages to uninstall, e.g. %w{Xdebug memcache}",
-      "calculated": false,
-      "recipes": [
-        "pecl::uninstall_packages"
-      ],
-      "choice": [
-
-      ],
-      "type": "array",
       "display_name": "PECL remove packages",
-      "default": null
-    },
-    "pecl/system_packages": {
-      "required": "optional",
-      "description": "Any array of arbitrary system packages to install that any PECL packages require for build/install, e.g. %w{libmagickwand-dev libgraphicsmagick1-dev}",
       "calculated": false,
       "recipes": [
         "pecl::uninstall_packages"
@@ -28,13 +19,28 @@
       "choice": [
 
       ],
-      "type": "array",
-      "display_name": "PECL system packages",
-      "default": null
+      "default": null,
+      "required": "optional"
     },
     "pecl/packages": {
-      "required": "optional",
+      "type": "array",
       "description": "The PECL packages to install, e.g. %w{mongo apc}",
+      "display_name": "PECL packages",
+      "calculated": false,
+      "recipes": [
+        "pecl",
+        "pecl::install_packages"
+      ],
+      "choice": [
+
+      ],
+      "default": null,
+      "required": "optional"
+    },
+    "pecl/system_packages": {
+      "type": "array",
+      "description": "Any array of arbitrary system packages to install that any PECL packages require for build/install, e.g. %w{libmagickwand-dev libgraphicsmagick1-dev}",
+      "display_name": "PECL system packages",
       "calculated": false,
       "recipes": [
         "pecl::install_packages"
@@ -42,34 +48,29 @@
       "choice": [
 
       ],
-      "type": "array",
-      "display_name": "PECL packages",
-      "default": null
+      "default": null,
+      "required": "optional"
     }
   },
-  "description": "Installs/Configures pecl",
-  "version": "0.0.1",
+  "suggestions": {
+  },
+  "name": "pecl",
+  "license": "Apache 2.0",
   "recipes": {
     "pecl::uninstall_packages": "Uninstalls PECL packages.",
     "pecl::install_packages": "Installs PECL packages.",
     "pecl::default": "Ensures PECL is installed so packages can be installed."
   },
-  "maintainer": "Chris Fordham",
-  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
   "providing": {
-  },
-  "maintainer_email": "chris@xhost.com.au",
-  "license": "Apache 2.0",
-  "name": "pecl",
-  "replacing": {
   },
   "conflicting": {
   },
-  "dependencies": {
-    "php": ">= 0.0.0"
+  "recommendations": {
   },
+  "maintainer_email": "chris@xhost.com.au",
+  "maintainer": "Chris Fordham",
   "groupings": {
   },
-  "platforms": {
+  "replacing": {
   }
 }

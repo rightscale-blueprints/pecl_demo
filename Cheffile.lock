@@ -28,7 +28,7 @@ GIT
   remote: https://github.com/flaccid/cookbooks
   path: cookbooks/pecl
   ref: master
-  sha: ac84c0d2902f13c05b51c1a968d5a85576b42d6c
+  sha: b00fd64b09cc98b814265c84770ff35e9e715ea2
   specs:
     pecl (0.0.1)
       php (>= 0.0.0)
