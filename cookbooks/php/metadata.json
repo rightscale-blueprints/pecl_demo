@@ -1,52 +1,52 @@
 {
   "license": "Apache 2.0",
-  "recipes": {
-    "php::module_curl": "Install the php5-curl package",
-    "php::package": "Installs php using packages.",
-    "php::module_sqlite3": "Install the php5-sqlite3 package",
-    "php": "Installs php",
-    "php::module_memcache": "Install the php5-memcache package",
-    "php::module_pgsql": "Install the php5-pgsql packag",
-    "php::module_mysql": "Install the php5-mysql package",
-    "php::module_fpdf": "Install the php-fpdf package",
-    "php::module_apc": "Install the php5-apc package",
-    "php::module_ldap": "Install the php5-ldap package",
-    "php::source": "Installs php from source.",
-    "php::module_gd": "Install the php5-gd package",
-    "php::module_fileinfo": "Install the php5-fileinfo package"
+  "dependencies": {
+    "build-essential": ">= 0.0.0",
+    "xml": ">= 0.0.0",
+    "mysql": ">= 0.0.0"
+  },
+  "description": "Installs and maintains php and php modules",
+  "version": "1.1.0",
+  "maintainer_email": "cookbooks@opscode.com",
+  "conflicting": {
   },
   "groupings": {
   },
-  "conflicting": {
-  },
-  "suggestions": {
-  },
-  "dependencies": {
-    "build-essential": ">= 0.0.0",
-    "mysql": ">= 0.0.0",
-    "xml": ">= 0.0.0"
-  },
-  "description": "Installs and maintains php and php modules",
-  "replacing": {
+  "maintainer": "Opscode, Inc.",
+  "attributes": {
   },
   "providing": {
   },
-  "platforms": {
-    "redhat": ">= 0.0.0",
-    "amazon": ">= 0.0.0",
-    "scientific": ">= 0.0.0",
-    "debian": ">= 0.0.0",
-    "fedora": ">= 0.0.0",
-    "ubuntu": ">= 0.0.0",
-    "centos": ">= 0.0.0"
+  "recipes": {
+    "php::module_apc": "Install the php5-apc package",
+    "php": "Installs php",
+    "php::module_gd": "Install the php5-gd package",
+    "php::module_mysql": "Install the php5-mysql package",
+    "php::module_sqlite3": "Install the php5-sqlite3 package",
+    "php::module_memcache": "Install the php5-memcache package",
+    "php::module_ldap": "Install the php5-ldap package",
+    "php::package": "Installs php using packages.",
+    "php::module_fpdf": "Install the php-fpdf package",
+    "php::module_fileinfo": "Install the php5-fileinfo package",
+    "php::source": "Installs php from source.",
+    "php::module_pgsql": "Install the php5-pgsql packag",
+    "php::module_curl": "Install the php5-curl package"
   },
-  "maintainer": "Opscode, Inc.",
-  "long_description": "",
+  "replacing": {
+  },
+  "suggestions": {
+  },
   "name": "php",
-  "attributes": {
-  },
   "recommendations": {
   },
-  "maintainer_email": "cookbooks@opscode.com",
-  "version": "1.1.1"
+  "platforms": {
+    "scientific": ">= 0.0.0",
+    "ubuntu": ">= 0.0.0",
+    "centos": ">= 0.0.0",
+    "fedora": ">= 0.0.0",
+    "amazon": ">= 0.0.0",
+    "redhat": ">= 0.0.0",
+    "debian": ">= 0.0.0"
+  },
+  "long_description": ""
 }

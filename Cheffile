@@ -29,7 +29,7 @@ cookbook 'apache2',
 
 cookbook 'php',
   :git => 'https://github.com/opscode-cookbooks/php',
-  :ref => 'master'
+  :ref => '1.1.0'
 
 cookbook 'cron',
   :git => 'https://github.com/opscode-cookbooks/cron',

@@ -89,10 +89,10 @@ GIT
 
 GIT
   remote: https://github.com/opscode-cookbooks/php
-  ref: master
-  sha: e22f363a654fbec020d5ff8f1cffeda3d97bee65
+  ref: 1.1.0
+  sha: 4e76d07dbe82de87c4f5055bd207c27fa15c41db
   specs:
-    php (1.1.1)
+    php (1.1.0)
       build-essential (>= 0.0.0)
       mysql (>= 0.0.0)
       xml (>= 0.0.0)
