@@ -1,0 +1,118 @@
+{
+  "attributes": {
+    "authorization/sudo/users": {
+      "required": "optional",
+      "type": "array",
+      "choice": [
+
+      ],
+      "default": "",
+      "description": "Users who are allowed sudo ALL",
+      "calculated": false,
+      "display_name": "Sudo Users",
+      "recipes": [
+
+      ]
+    },
+    "authorization/sudo/include_sudoers_d": {
+      "required": "optional",
+      "type": "string",
+      "choice": [
+
+      ],
+      "default": "false",
+      "description": "Whether to create the sudoers.d includedir",
+      "calculated": false,
+      "display_name": "Include sudoers.d",
+      "recipes": [
+
+      ]
+    },
+    "authorization": {
+      "required": "optional",
+      "type": "hash",
+      "choice": [
+
+      ],
+      "description": "Hash of Authorization attributes",
+      "calculated": false,
+      "display_name": "Authorization",
+      "recipes": [
+
+      ]
+    },
+    "authorization/sudo/groups": {
+      "required": "optional",
+      "type": "array",
+      "choice": [
+
+      ],
+      "default": "",
+      "description": "Groups who are allowed sudo ALL",
+      "calculated": false,
+      "display_name": "Sudo Groups",
+      "recipes": [
+
+      ]
+    },
+    "authorization/sudo/passwordless": {
+      "required": "optional",
+      "type": "string",
+      "choice": [
+
+      ],
+      "default": "false",
+      "description": "",
+      "calculated": false,
+      "display_name": "Passwordless Sudo",
+      "recipes": [
+
+      ]
+    },
+    "authorization/sudo": {
+      "required": "optional",
+      "type": "hash",
+      "choice": [
+
+      ],
+      "description": "Hash of Authorization/Sudo attributes",
+      "calculated": false,
+      "display_name": "Authorization Sudoers",
+      "recipes": [
+
+      ]
+    }
+  },
+  "maintainer_email": "cookbooks@opscode.com",
+  "groupings": {
+  },
+  "dependencies": {
+  },
+  "providing": {
+  },
+  "suggestions": {
+  },
+  "platforms": {
+    "ubuntu": ">= 0.0.0",
+    "debian": ">= 0.0.0",
+    "centos": ">= 0.0.0",
+    "redhat": ">= 0.0.0",
+    "freebsd": ">= 0.0.0",
+    "fedora": ">= 0.0.0"
+  },
+  "version": "1.2.3",
+  "description": "Installs sudo and configures /etc/sudoers",
+  "long_description": "",
+  "name": "sudo",
+  "recipes": {
+    "sudo": "Installs sudo and configures /etc/sudoers"
+  },
+  "license": "Apache 2.0",
+  "maintainer": "Opscode, Inc.",
+  "replacing": {
+  },
+  "conflicting": {
+  },
+  "recommendations": {
+  }
+}

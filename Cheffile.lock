@@ -1,0 +1,120 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    build-essential (1.2.0)
+    mysql (2.0.2)
+      build-essential (>= 0.0.0)
+      openssl (>= 0.0.0)
+    openssl (1.0.0)
+    xml (1.0.4)
+
+GIT
+  remote: https://github.com/coderanger/chef-collectd_plugins
+  ref: master
+  sha: d8e264da9ad982dc75978e48c14a9323db553378
+  specs:
+    collectd_plugins (1.0.0)
+      collectd (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/chef-collectd
+  ref: master
+  sha: 5d951bbe4e046c0cc4b175e9785ffa784794e130
+  specs:
+    collectd (1.0.0)
+      apache2 (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/pecl
+  ref: master
+  sha: 6b5cab7c0b8282a8aa22de01eed51de1d565808f
+  specs:
+    pecl (0.0.1)
+      php (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/resolver
+  ref: master
+  sha: 5b0fa52d2232d5d2c7665dde63ad79f7e0c92591
+  specs:
+    resolver (0.8.2)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/rightscale
+  ref: master
+  sha: 5b0fa52d2232d5d2c7665dde63ad79f7e0c92591
+  specs:
+    rightscale (0.0.1)
+      collectd (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/system
+  ref: master
+  sha: 5b0fa52d2232d5d2c7665dde63ad79f7e0c92591
+  specs:
+    system (0.0.1)
+      cron (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/postfix
+  ref: master
+  sha: 6729a86466a27983fc52807f6edddd88a70cf41c
+  specs:
+    postfix (1.2.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/apache2
+  ref: master
+  sha: 42418893f27f883d25fea85ed587b443d0171ded
+  specs:
+    apache2 (1.3.2)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/cron
+  ref: master
+  sha: dce04363b6a02d36f8da88f202cedfae2daa6a2c
+  specs:
+    cron (1.2.2)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/ntp
+  ref: master
+  sha: 288935754b2c25017e3e0890ffb1a35b2a9f4668
+  specs:
+    ntp (1.3.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/php
+  ref: master
+  sha: e22f363a654fbec020d5ff8f1cffeda3d97bee65
+  specs:
+    php (1.1.1)
+      build-essential (>= 0.0.0)
+      mysql (>= 0.0.0)
+      xml (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/sudo
+  ref: master
+  sha: 8be9e7fe425f2d4b1cbf43ade6f04ea2be6d2cf5
+  specs:
+    sudo (1.2.3)
+
+DEPENDENCIES
+  apache2 (>= 0)
+  collectd (>= 0)
+  collectd_plugins (>= 0)
+  cron (>= 0)
+  ntp (>= 0)
+  pecl (>= 0)
+  php (>= 0)
+  postfix (>= 0)
+  resolver (>= 0)
+  rightscale (>= 0)
+  sudo (>= 0)
+  system (>= 0)
+
